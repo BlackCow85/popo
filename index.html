@@ -9,69 +9,33 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Noto+Sans+KR:wght@300;500;700&display=swap" rel="stylesheet">
     
     <style>
-        /* 커스텀 폰트 및 설정 */
         body {
             font-family: 'Noto Sans KR', sans-serif;
             background-color: #050505;
             color: #ffffff;
             overflow-x: hidden;
         }
-        .font-brand {
-            font-family: 'Orbitron', sans-serif;
-        }
-        
-        /* 네온 그린 테마 */
-        .text-neon-green {
-            color: #39ff14;
-            text-shadow: 0 0 10px rgba(57, 255, 20, 0.7);
-        }
-        .bg-neon-green {
-            background-color: #39ff14;
-            box-shadow: 0 0 20px rgba(57, 255, 20, 0.5);
-        }
-        .border-neon-green {
-            border-color: #39ff14;
-            box-shadow: 0 0 10px rgba(57, 255, 20, 0.3);
-        }
-        .hover-neon-shadow:hover {
-            box-shadow: 0 0 30px rgba(57, 255, 20, 0.4);
-        }
-
-        /* 배경 그리드 */
+        .font-brand { font-family: 'Orbitron', sans-serif; }
+        .text-neon-green { color: #39ff14; text-shadow: 0 0 10px rgba(57, 255, 20, 0.7); }
+        .bg-neon-green { background-color: #39ff14; box-shadow: 0 0 20px rgba(57, 255, 20, 0.5); }
+        .border-neon-green { border-color: #39ff14; box-shadow: 0 0 10px rgba(57, 255, 20, 0.3); }
+        .hover-neon-shadow:hover { box-shadow: 0 0 30px rgba(57, 255, 20, 0.4); }
         .bg-grid {
             background-image: linear-gradient(rgba(57, 255, 20, 0.05) 1px, transparent 1px),
             linear-gradient(90deg, rgba(57, 255, 20, 0.05) 1px, transparent 1px);
             background-size: 50px 50px;
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            z-index: -1;
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;
         }
-
-        /* 글래스모피즘 */
         .glass-card {
             background: rgba(20, 20, 20, 0.6);
             backdrop-filter: blur(16px);
             border: 1px solid rgba(57, 255, 20, 0.2);
             border-radius: 1rem;
         }
-
-        /* 로고 효과 */
-        .logo-glow {
-            filter: drop-shadow(0 0 20px rgba(57, 255, 20, 0.6));
-            transition: transform 0.3s ease;
-        }
-        .logo-glow:hover {
-            transform: scale(1.05) rotate(2deg);
-        }
-
-        /* 스크롤바 숨기기 (모달용) */
-        .no-scrollbar::-webkit-scrollbar {
-            display: none;
-        }
-        .no-scrollbar {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
+        .logo-glow { filter: drop-shadow(0 0 20px rgba(57, 255, 20, 0.6)); transition: transform 0.3s ease; }
+        .logo-glow:hover { transform: scale(1.05) rotate(2deg); }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
     </style>
 </head>
 <body class="antialiased selection:bg-neon-green selection:text-black">
@@ -81,7 +45,7 @@
     <nav class="fixed w-full z-40 transition-all duration-300 py-4 px-6 glass-card rounded-none border-t-0 border-x-0 bg-black/80">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
             <div class="flex items-center gap-3 cursor-pointer" onclick="window.scrollTo(0,0)">
-                <img src="LOGO.JPG" alt="CTP Logo" class="w-10 h-10 rounded-full border border-green-500">
+                <img src="logo.jpg" alt="CTP Logo" class="w-10 h-10 rounded-full border border-green-500">
                 <span class="font-brand text-2xl font-bold text-neon-green tracking-widest">CRYPTOPIA</span>
             </div>
             <div class="hidden md:flex space-x-8 text-sm font-bold tracking-widest text-gray-300 items-center">
@@ -98,7 +62,7 @@
     <header class="relative min-h-screen flex flex-col justify-center items-center text-center px-4 overflow-hidden pt-20">
         <div data-aos="zoom-in" data-aos-duration="1000" class="mb-8 relative group cursor-pointer">
             <div class="absolute -inset-1 bg-gradient-to-r from-green-600 to-green-400 rounded-full blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-pulse"></div>
-            <img src="LOGO.JPG" alt="Cryptopia Character" class="relative w-64 h-64 md:w-80 md:h-80 object-cover rounded-full border-4 border-black logo-glow">
+            <img src="logo.jpg" alt="Cryptopia Character" class="relative w-64 h-64 md:w-80 md:h-80 object-cover rounded-full border-4 border-black logo-glow">
         </div>
 
         <h1 data-aos="fade-up" data-aos-delay="200" class="font-brand text-5xl md:text-8xl font-black mb-4">
@@ -195,7 +159,6 @@
     <section id="tokenomics" class="py-24 relative">
         <div class="max-w-6xl mx-auto px-6">
             <h2 data-aos="zoom-in" class="font-brand text-5xl text-center text-neon-green mb-16">TOKENOMICS</h2>
-            
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div data-aos="fade-right" class="glass-card p-8 flex justify-center items-center aspect-square relative">
                     <div class="relative w-64 h-64 rounded-full border-[20px] border-gray-800 flex justify-center items-center">
@@ -210,7 +173,6 @@
                     <div class="absolute top-4 left-4 text-xs text-gray-500 font-mono">GENESIS BLOCK: CLEAN</div>
                     <div class="absolute bottom-4 right-4 text-xs text-gray-500 font-mono">STATUS: WASHING</div>
                 </div>
-
                 <div data-aos="fade-left" class="space-y-6">
                     <div class="glass-card p-6 border-l-4 border-neon-green hover:bg-white/5 transition">
                         <div class="flex justify-between items-center mb-2">
@@ -219,7 +181,6 @@
                         </div>
                         <p class="text-gray-400 text-sm">대부분의 물량은 유동성 공급에 사용됩니다. 모두가 공평하게 세탁기를 돌릴 수 있습니다.</p>
                     </div>
-
                     <div class="glass-card p-6 border-l-4 border-green-700 hover:bg-white/5 transition">
                         <div class="flex justify-between items-center mb-2">
                             <h3 class="text-xl font-bold text-white">Detergent Fund (CEX)</h3>
@@ -227,7 +188,6 @@
                         </div>
                         <p class="text-gray-400 text-sm">거래소 상장 및 마케팅을 위한 세제 구입 비용입니다.</p>
                     </div>
-
                     <div class="glass-card p-6 border-l-4 border-gray-600 hover:bg-white/5 transition">
                         <div class="flex justify-between items-center mb-2">
                             <h3 class="text-xl font-bold text-white">The Janitors (Team)</h3>
@@ -235,7 +195,6 @@
                         </div>
                         <p class="text-gray-400 text-sm">세탁기를 관리하는 청소부(개발팀) 할당량입니다.</p>
                     </div>
-
                     <div class="grid grid-cols-2 gap-4 mt-8">
                         <div class="glass-card p-4 text-center">
                             <div class="text-gray-500 text-xs mb-1">BUY TAX</div>
@@ -253,7 +212,7 @@
 
     <footer class="border-t border-gray-800 bg-black py-12 text-center">
         <div class="mb-8 flex justify-center">
-             <img src="LOGO.JPG" alt="CTP Logo" class="w-20 h-20 rounded-full border-2 border-neon-green opacity-80 grayscale hover:grayscale-0 transition duration-500">
+             <img src="logo.jpg" alt="CTP Logo" class="w-20 h-20 rounded-full border-2 border-neon-green opacity-80 grayscale hover:grayscale-0 transition duration-500">
         </div>
         <div class="flex justify-center gap-6 mb-8">
             <a href="#" class="text-gray-400 hover:text-neon-green transition">TWITTER (X)</a>
@@ -269,15 +228,12 @@
 
     <div id="whitepaper-modal" class="fixed inset-0 z-[60] hidden">
         <div class="absolute inset-0 bg-black/90 backdrop-blur-sm" onclick="closeWhitepaper()"></div>
-        
         <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-3xl h-[80vh] overflow-y-auto no-scrollbar glass-card border border-neon-green shadow-[0_0_50px_rgba(57,255,20,0.2)] p-8 md:p-12">
             <button onclick="closeWhitepaper()" class="absolute top-6 right-6 text-gray-400 hover:text-white text-2xl">✕</button>
-            
             <div class="text-center mb-12">
                 <h2 class="font-brand text-3xl md:text-5xl text-neon-green mb-4">THE DIRTY PAPER</h2>
                 <p class="text-gray-400 uppercase tracking-widest text-sm">Whitepaper Ver 1.0 (세탁기 사용설명서)</p>
             </div>
-
             <div class="space-y-12 text-left">
                 <div>
                     <h3 class="text-2xl font-bold text-white mb-4 border-b border-gray-700 pb-2">1. 문제점 (The Dirt)</h3>
@@ -288,7 +244,6 @@
                         새로운 불장(Bull Market)으로 나아가는 것을 방해합니다.
                     </p>
                 </div>
-
                 <div>
                     <h3 class="text-2xl font-bold text-white mb-4 border-b border-gray-700 pb-2">2. 해결책 (The Solution)</h3>
                     <p class="text-gray-300 leading-7 mb-4">
@@ -300,7 +255,6 @@
                         <li><span class="text-white">지갑 세탁:</span> 결국 당신의 지갑엔 $CTP만 남게 될 것입니다.</li>
                     </ul>
                 </div>
-
                 <div>
                     <h3 class="text-2xl font-bold text-white mb-6 border-b border-gray-700 pb-2">3. 세탁 코스 (Roadmap)</h3>
                     <div class="border-l-2 border-neon-green pl-6 space-y-8">
@@ -327,7 +281,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="mt-12 text-center">
                 <button onclick="closeWhitepaper()" class="bg-neon-green text-black font-bold px-8 py-3 rounded hover:bg-white transition">
                     닫기 (CLOSE)
@@ -338,38 +291,20 @@
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        // AOS 초기화
-        AOS.init({
-            once: true,
-            offset: 100,
-            duration: 800,
-            easing: 'ease-out-cubic',
-        });
-
-        // Marquee Animation CSS
+        AOS.init({ once: true, offset: 100, duration: 800, easing: 'ease-out-cubic' });
         const style = document.createElement('style');
         style.innerHTML = `
-            @keyframes marquee {
-                0% { transform: translateX(0); }
-                100% { transform: translateX(-50%); }
-            }
-            .animate-marquee {
-                animation: marquee 10s linear infinite;
-            }
+            @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+            .animate-marquee { animation: marquee 10s linear infinite; }
         `;
         document.head.appendChild(style);
-
-        // Modal Functions
         function openWhitepaper() {
-            const modal = document.getElementById('whitepaper-modal');
-            modal.classList.remove('hidden');
-            document.body.style.overflow = 'hidden'; // 배경 스크롤 막기
+            document.getElementById('whitepaper-modal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
         }
-
         function closeWhitepaper() {
-            const modal = document.getElementById('whitepaper-modal');
-            modal.classList.add('hidden');
-            document.body.style.overflow = 'auto'; // 배경 스크롤 허용
+            document.getElementById('whitepaper-modal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
         }
     </script>
 </body>
